@@ -18,6 +18,10 @@ h1 {
     width: var(--main-image-width);
     max-height: 100vh;
 }
+#video{
+    width: var(--main-image-width);
+    max-height: 100vh;
+}
 
 #history-view{
     overflow-y: scroll;

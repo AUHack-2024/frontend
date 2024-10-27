@@ -28,40 +28,34 @@ function addImage(data) {
     console.log(currentVideoArray, " currentVideoArray ", imageList, " imageList")
     currentVideoArray = [];
     renderImageList();
-    // renderMainGif(counter, parsedData.best)
-    if(imageList.length >= 2) renderMainImage(imageList.pop())
+    renderMainGif(counter, parsedData.best)
+    // if(imageList.length >= 2) renderMainImage(imageList.pop())
 }
 
 function renderMainGif(counter, n){
     console.log(dictionary)
     const gifArray = dictionary[counter-1].slice((n*10-10), (n*10))
-    // const base64Images = []
-    // gifArray.forEach(element => {
-    //     base64Images.push(element.image)
-    // });
-    // createGif(base64Images).then(gifDataUrl => {
-    //     console.log('Generated GIF Data URL:', gifDataUrl);
-    //     // You can use the gifDataUrl to display the GIF in an <img> element
-    //     const img = document.createElement('img');
-    //     img.src = gifDataUrl;
-    //     document.body.appendChild(img);
-    // });
-    const gif = new GIF({
-        workers: 2,    
-        quality: 5,   // Quality of the GIF (lower means better quality)
-        workerScript: './gif.worker.js', // Path to the gif.worker.js file
+    const base64Images = []
+    gifArray.forEach(element => {
+        base64Images.push(element.image)
     });
-    gifArray.forEach((base64) => {
-        base64ToImage(base64.image, (img) => {
-            gif.addFrame(img, { delay: 170 }); 
-        })
-    })
-    gif.on('finished', (blob) => {
-        const gifUrl = URL.createObjectURL(blob);
-        console.log('GIF created:', gifUrl);
+    createVideo(base64Images)
+    // const gif = new GIF({
+    //     workers: 2,    
+    //     quality: 5,   // Quality of the GIF (lower means better quality)
+    //     workerScript: './gif.worker.js', // Path to the gif.worker.js file
+    // });
+    // gifArray.forEach((base64) => {
+    //     base64ToImage(base64.image, (img) => {
+    //         gif.addFrame(img, { delay: 170 }); 
+    //     })
+    // })
+    // gif.on('finished', (blob) => {
+    //     const gifUrl = URL.createObjectURL(blob);
+    //     console.log('GIF created:', gifUrl);
     
-        renderMainImage(gifUrl)
-    });
+    //     mainImage.src = gifUrl
+    // });
 }
 
 function base64ToImage(base64String, callback) {
@@ -69,6 +63,53 @@ function base64ToImage(base64String, callback) {
     img.src = `data:image/jpg;base64,${base64String}`;
     img.onload = () => callback(img);
     img.onerror = (error) => console.error('Error loading image:', error);
+}
+
+const videoElement = document.getElementById('video');
+const frameDuration = 500;
+async function createVideo(base64Images) {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+
+    // Create a video element and set its width/height based on the first image
+    const img = new Image();
+    img.src = `data:image/jpg;base64,${base64Images[0]}`;
+
+    await new Promise((resolve) => {
+        img.onload = () => {
+            canvas.width = img.width;
+            canvas.height = img.height;
+            resolve();
+        };
+    });
+
+    const stream = canvas.captureStream(25); // 25 fps
+    const mediaRecorder = new MediaRecorder(stream);
+    const chunks = [];
+
+    mediaRecorder.ondataavailable = (e) => {
+        if (e.data.size > 0) chunks.push(e.data);
+    };
+
+    mediaRecorder.onstop = () => {
+        const blob = new Blob(chunks, { type: 'video/webm' });
+        const videoUrl = URL.createObjectURL(blob);
+        videoElement.src = videoUrl;
+    };
+
+    mediaRecorder.start();
+
+    for (const base64Image of base64Images) {
+        img.src = `data:image/jpg;base64,${base64Image}`;
+        await new Promise((resolve) => {
+            img.onload = () => {
+                ctx.drawImage(img, 0, 0);
+                setTimeout(resolve, frameDuration);
+            };
+        });
+    }
+
+    mediaRecorder.stop();
 }
 
 // /O(logn)
@@ -102,7 +143,7 @@ function renderImageList() {
 
         historyView.appendChild(historyElement);
     });
-}|
+}
 
 function renderMainImage(image){
     mainImage.src = `data:image/jpg;base64,${image.image}`
