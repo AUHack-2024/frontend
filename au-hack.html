@@ -1,182 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-        <script src="https://kit.fontawesome.com/2b70c67f63.js" crossorigin="anonymous"></script>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Smart surveillance cameras</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap Icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-        <!-- SimpleLightbox plugin CSS-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Home</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#liveCameras">Live Cameras</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#howItWorks">How It Works</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Team</a></li>
-                    </ul>
+
+<head>
+    <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://kit.fontawesome.com/2b70c67f63.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Smart surveillance cameras</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#page-top">Home</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#liveCameras">Live Cameras</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#howItWorks">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Team</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container px-4 px-lg-5 h-100">
+            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-8 align-self-end">
+                    <h1 class="text-white font-weight-bold">Smart Surveillance Cameras</h1>
+                    <hr class="divider" />
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <p class="text-white-75 mb-5">Surveillance cameras powered by HPC for movement detection.</p>
+                    <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
                 </div>
             </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container px-4 px-lg-5 h-100">
-                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-8 align-self-end">
-                        <h1 class="text-white font-weight-bold">Smart Surveillance Cameras</h1>
-                        <hr class="divider" />
+        </div>
+    </header>
+    <!-- About-->
+    <section class="page-section bg-primary" id="about">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="text-white mt-0">No more endless searching!</h2>
+                    <hr class="divider divider-light" />
+                    <p class="text-white-75 mb-4">We’ve developed a smart camera algorithm that takes the hassle out of
+                        monitoring your surveillance footage.
+                        Our technology analyzes your camera feed in real-time, automatically detecting any movement. If
+                        something significant happens, you’ll receive an instant notification,
+                        and the exact moment will be saved for you to review at your convenience. </p>
+                    <a class="btn btn-light btn-xl" href="#services">View more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services-->
+    <section class="page-section" id="services">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-0">At Your Service</h2>
+            <hr class="divider" />
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="fa-solid fa-video fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Automated Surveillance Monitoring</h3>
+                        <p class="text-muted mb-0">Our algorithm continuously analyzes your camera feed in real-time.
+                        </p>
                     </div>
-                    <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5">Surveillance cameras powered by HPC for movement detection.</p>
-                        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="fa-regular fa-bell fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Instant Movement Detection Alerts</h3>
+                        <p class="text-muted mb-0">Receive instant notifications the moment any movement is detected.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="fa-solid fa-download fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Efficient Event Recording</h3>
+                        <p class="text-muted mb-0">Key moments are automatically saved and organized.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="fa-regular fa-clock fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Time and Effort Savings</h3>
+                        <p class="text-muted mb-0">Eliminate the hassle of manual monitoring.</p>
                     </div>
                 </div>
             </div>
-        </header>
-        <!-- About-->
+        </div>
+    </section>
+    <!-- Live Cameras -->
+    <div id="liveCameras">
         <section class="page-section bg-primary" id="about">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">No more endless searching!</h2>
+                        <h2 class="text-white mt-0">Interested in seeing our system in action?</h2>
                         <hr class="divider divider-light" />
-                        <p class="text-white-75 mb-4">We’ve developed a smart camera algorithm that takes the hassle out of monitoring your surveillance footage. 
-                            Our technology analyzes your camera feed in real-time, automatically detecting any movement. If something significant happens, you’ll receive an instant notification, 
-                            and the exact moment will be saved for you to review at your convenience. </p>
-                        <a class="btn btn-light btn-xl" href="#services">View more</a>
+                        <p class="text-white-75 mb-4">Check out some of the
+                            cameras we have equipped with our smart monitoring system. You'll see how it quickly detects
+                            and captures movement, saving each important moment for easy review. Experience how simple
+                            and effective surveillance can be!</p>
+                        <a class="btn btn-light btn-xl" href="./index.html" target="_blank">Try it out</a>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Services-->
-        <section class="page-section" id="services">
-            <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">At Your Service</h2>
-                <hr class="divider" />
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="fa-solid fa-video fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Automated Surveillance Monitoring</h3>
-                            <p class="text-muted mb-0">Our algorithm continuously analyzes your camera feed in real-time.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="fa-regular fa-bell fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Instant Movement Detection Alerts</h3>
-                            <p class="text-muted mb-0">Receive instant notifications the moment any movement is detected.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="fa-solid fa-download fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Efficient Event Recording</h3>
-                            <p class="text-muted mb-0">Key moments are automatically saved and organized.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="fa-regular fa-clock fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Time and Effort Savings</h3>
-                            <p class="text-muted mb-0">Eliminate the hassle of manual monitoring.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Live Cameras -->
-        <div id="liveCameras">
-            <section class="page-section bg-primary" id="about">
-                <div class="container px-4 px-lg-5">
-                    <div class="row gx-4 gx-lg-5 justify-content-center">
-                        <div class="col-lg-8 text-center">
-                            <h2 class="text-white mt-0">Interested in seeing our system in action?</h2>
-                            <hr class="divider divider-light" />
-                            <p class="text-white-75 mb-4">Check out some of the
-                                cameras we have equipped with our smart monitoring system. You'll see how it quickly detects
-                                and captures movement, saving each important moment for easy review. Experience how simple
-                                and effective surveillance can be!</p>
-                                <a class="btn btn-light btn-xl" href="./index.html" target="_blank">Try it out</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!-- How It works -->
-        <div id="howItWorks">
-            <section class="page-section" id="howItWorks">
-                <div class="container px-4 px-lg-5">
-                    <div class="row gx-4 gx-lg-5 justify-content-center">
-                        <div class="col-lg-8 text-center">
-                            <h2 class="mt-0">Product Overview</h2>
-                            <hr class="divider"/>          
-                            <p class="text-muted mb-0">Test</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!-- Contact-->
-        <section class="page-section" id="contact">
+    </div>
+    <!-- How It works -->
+    <div id="howItWorks">
+        <section class="page-section" id="howItWorks">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Our Team</h2>
-                        </div>
+                    <h2 class="mt-0 text-center">Product Overview</h2>
+                    <hr class="divider" />
+                    <p class="text-muted mb-0">The rise of artificial intelligence in security and surveillance has
+                        led
+                        to an increased demand for high-performance image processing systems. Surveillance cameras,
+                        especially
+                        in areas with high traffic like airports, shopping malls, and public transit stations,
+                        require rapid and
+                        efficient processing of video feeds to assist with monitoring. Here, the use of JAX, a
+                        high-performance
+                        numerical computing library developed by Google, emerges as a game-changer. Leveraging JAX
+                        for image processing in surveillance applications enables faster computations, which is
+                        really needed when talking about multiple video feeds processed in real-time.
+
+                        We have developed an application to do just this, taking in multiple video feeds, analysing
+                        them with the use of some basic image processing algorithms and displaying the most
+                        important feeds to the end user.</p>
+                    <hr style="width: 100%; border: 2px solid #1b4664; margin-top: 20px; margin-bottom: 20px;">
+                    <h2 class="mt-0">What is JAX?</h2>
+                    <p class="text-muted mb-0">JAX is an open-source library built on top of NumPy, designed to
+                        facilitate high-performance numerical computing. The primary strengths of JAX lie in its ability
+                        to leverage automatic differentiation (Autograd) and support Just-In-Time (JIT) compilation
+                        using the XLA (Accelerated Linear Algebra) compiler. With these features, JAX efficiently
+                        offloads computation to GPUs or TPUs, providing significant performance benefits for image
+                        processing tasks, which are often resource-intensive.
+                    </p>
+                    <p></p>
+                    <p class="mt-0">Why use JAX for video processing?</p>
+                    <ul class="text-muted mb-0">
+                        <li>JAX’s JIT compiler transforms functions into highly optimized machine code, allowing faster
+                            execution, critical for real-time surveillance.</li>
+                        <li>JAX enables easy scaling of workloads across multiple devices, which is beneficial in
+                            large-scale surveillance networks.</li>
+                        <li>JAX's pythonic design allows for fast development, ensuring features can be modified and
+                            added quickly to the product according to the needs of the consumer.</li>
+                    </ul>
+                    <p></p>
+                    <p class="mt-0">Key Use Cases in Surveillance Image Processing</p>
+                    <ul class="text-muted mb-0">
+                        <li><strong>Object Detection:</strong> Detecting and tracking objects (e.g., people, vehicles)
+                            from live camera feeds.</li>
+                        <li><strong>Activity Recognition:</strong> Identifying which of the video feeds have something
+                            happening in them to flag in the system.</li>
+                        <li><strong>Anomaly Detection:</strong> Recognizing abnormal behavior by analyzing patterns in
+                            real-time data feeds.</li>
+                    </ul>
+
+                    <p class="text-muted mb-0">In our MVP, we have just implemented Activity Recognition which can
+                        complement the other
+                        features. It would not be wise to implement anomaly detection of a static video feed.</p>
+                    <hr style="width: 100%; border: 2px solid #1b4664; margin-top: 20px; margin-bottom: 20px;">
+                    <h2 class="mt-0">Getting into the nitty-gritty</h2>
+                    <p class="text-muted mb-0">Let's walk through a basic image processing pipeline in JAX.</p>
+                    <p></p>
+                    <p class="mt-0">Preprocessing</p>
+                    <p class="text-muted mb-0">To reduce computational overhead, we need to discard unnecessary
+                        information from our frames.
+                        Some basic steps we can take are converting images to grayscale and reducing the resolution of
+                        the image. In this part, we also want to normalize luminance; this will help with our algorithm
+                        later on.</p>
+                    <p></p>
+                    <p class="mt-0">Step 1: Grayscale Conversion</h3>
+                    <p class="text-muted mb-0">For the bulk of the project we will be using jax.numpy which has
+                        accelerated versions of a lot of the functions of python's numpy. In our case, a simple way to
+                        convert the RGB image to grayscale is to get the mean of the three colour channels.</p>
+                    <p></p>
+                    <pre><code>import jax.numpy as jnp
+
+def to_grayscale(img):
+    # JAX expects jax.numpy arrays, which work similarly to NumPy
+    return jnp.mean(img, axis=2) # The above will convert the image (x,y,3) to (x,y)</code></pre>
+
+                    <p class="mt-0">Step 2: Reducing Resolution</p>
+                    <p class="text-muted mb-0">Here, as well as reducing the resolution, we will resize the image into a
+                        square, we do this to help with a part of the algorithm coming up. Here jax has a useful
+                        function to resize the images, this can also be used if at a later time we want to implement
+                        some kind of image classification, where the input is restricted to a standard resolution.</p>
+                    <p></p>
+                    <pre><code>import jax 
+
+def resize_to_square(img, side_length):
+    # Resizes an image to a square with the specified side length
+    return jax.image.resize(img, (side_length, side_length), method='bilinear')</code></pre>
+
+                    <p class="mt-0">Step 3: Normalize Luminance</p>
+                    <p class="text-muted mb-0">Normalizing the image's luminance is an important part of the process.
+                        Let's say a cloud covers the sun and the video feed becomes darker, we do not want our system to
+                        flag this as an important event, so normalizing luminance helps with unimportant changes like
+                        this.</p>
+                    <p></p>
+                    <pre><code>import jax
+import jax.numpy as jnp
+
+def normalize_luminance(img):
+    # Normalizes the luminance values of an image so that the min value is 0 and the max value is 255
+    image = img.astype(jnp.float32)
+    normalized = (image - jnp.min(image)) / (jnp.max(image) - jnp.min(image))
+    normalized = normalized * 255
+    return normalized.astype(jnp.uint8)</code></pre>
+
+                    <h2 class="mt-0">Algorithms</h2>
+                    <p class="text-muted mb-0">There are a lot of algorithms that fall under the domain of Image
+                        Processing. We have selected
+                        two that best fit the problem at hand. To understand why these two were selected, we first need
+                        to understand our problem domain. We are trying to compare pairs of frames; if the two frames
+                        are significantly different, it means that the feed might have some significant activity in it.
+                        We need an algorithm that is sensitive enough to detect some activity (e.g., a person walking
+                        into frame), but not too sensitive where any slight change is detected (e.g., camera artifacts
+                        or a branch of a tree slightly moving).</p>
+                    <p></p>
+                    <p class="mt-0">1) Structural Similarity Index Measure (SSIM)</p>
+                    <p>
+                        $$\text{SSIM}(x,y)=\frac{(2\mu_x\mu_y+c_1)(2\sigma_{xy}+c_2)}{(\mu_x^2+\mu_y^2+c_1)(\sigma_x^2+\sigma_y^2+c_2)}$$
+                    </p>
+                    <p class="text-muted mb-0">Unlike simple pixel differencing, SSIM assesses changes based on
+                        luminance, contrast, and
+                        structure, which makes it ideal for detecting meaningful shifts while ignoring minor noise or
+                        lighting fluctuations. By setting an SSIM threshold, the system can control sensitivity,
+                        identifying significant structural changes that indicate activity without being overly sensitive
+                        to background noise. This makes SSIM highly adaptable and efficient for real-time applications,
+                        helping video monitoring systems detect and flag potential events with greater accuracy and
+                        fewer false positives.</p>
+
+                    <p class="text-muted mb-0">To use the algorithm, we first need to break down the image into tiles.
+                    </p>
+                    <p></p>
+                    <pre><code>def get_tiles(img, subdiv=5):
+    # Splits an image into a grid of smaller tiles.
+
+    # Calculate the side length of each tile based on the image size and subdivisions.
+    tile_size = img.shape[0] // subdiv
+
+    # Define a helper function to slice out a single tile from the image given grid indices (i, j).
+    def slice_tile(i, j):
+        start_indices = jnp.array([i * tile_size, j * tile_size])
+        slice_sizes = jnp.array([tile_size, tile_size])  # Define the slice size for the tile (it will always be square with dimensions tile_size x tile_size).
+        return jax.lax.dynamic_slice(img, start_indices, slice_sizes)  # Use JAX's `dynamic_slice` to extract the tile from the image at the specified start coordinates.
+
+    # Define a helper function to generate all tile index pairs for grid positions.
+    def generate_indices(subdiv):
+        # Helper function to generate all possible grid indices (i, j) for tiles.
+        # `i_indices` repeats row indices for each column in the grid, while `j_indices` tiles column indices.
+        i_indices = jnp.repeat(jnp.arange(subdiv), subdiv)
+        j_indices = jnp.tile(jnp.arange(subdiv), subdiv)
+        return jnp.stack((i_indices, j_indices), axis=-1)  # Stack row and column indices together to form (i, j) pairs for each tile.
+
+    # Generate a list of all (i, j) pairs covering the grid based on the specified subdivisions.
+    indices = generate_indices(subdiv)
+
+    # Map each (i, j) index to its corresponding tile by applying `slice_tile` to each pair.
+    tiles = jax.vmap(lambda idx: slice_tile(idx[0], idx[1]))(indices)
+
+    # Stack all extracted tiles into a single array for easier handling and return.
+    return jnp.stack(tiles)</code></pre>
+
+                    <p class="text-muted mb-0">After getting the tiles, we then need to compute SSIM.</p>
+                    <p></p>
+                    <pre><code>def ssim(tiles_1, tiles_2, subdiv=10):
+    def get_ssim_tile(tile_1, tile_2):
+        mu_x = jnp.mean(tile_1)
+        mu_y = jnp.mean(tile_2)
+        sigma_x = jnp.std(tile_1)
+        sigma_y = jnp.std(tile_2)
+        sigma_xy = jnp.mean((tile_1 - mu_x) * (tile_2 - mu_y))  # covariance
+        c1 = 0.01
+        c2 = 0.03
+        ssim = (2 * mu_x * mu_y + c1) * (2 * sigma_xy + c2) / ((mu_x**2 + mu_y**2 + c1) * (sigma_x**2 + sigma_y**2 + c2))
+        return ssim
+
+    tiles_1 = get_tiles(img_1, subdiv)
+    tiles_2 = get_tiles(img_2, subdiv)
+    ssim_values = jax.vmap(get_ssim_tile)(tiles_1, tiles_2)
+    return jnp.mean(ssim_values)</code></pre>
+
+                    <p class="mt-0">2. MSE with Blur</p>
+                    <p class="text-muted mb-0">The second algorithm is a simple Mean Squares Error (MSE) but blurring
+                        the image first to reduce the effect of small pixel-sized changes that might affect the output.
+                    </p>
+                    <p></p>
+                    <pre><code>def blur(img, window=50):
+        # Simple Gaussian blur
+        x = jnp.linspace(-3, 3, window)
+        window = jsp.stats.norm.pdf(x) * jsp.stats.norm.pdf(x[:, None])
+        window = window / jnp.sum(window, keepdims=True)
+        return jsp.signal.convolve2d(img, window, mode='same')
+    
+    def mse(img_1, img_2):
+        blur_img_1 = blur(img_1, 50)  # Need a sufficiently large window to see good results
+        blur_img_2 = blur(img_2, 50)    
+        return jnp.mean((blur_img_1 - blur_img_2)**2)</code></pre>
+
+                    <p class="mt-0">Combining the Algorithms</p>
+                    <p class="text-muted mb-0">After getting the scores from both algorithms, we need to combine the two results. Here, a simple
+                        weighting of each algorithm can help.</p>
+                    <p></p>
+                    <pre><code>def get_scores(frame1, frame2, w1=0.75, w2=0.25):
+        frame1 = frame1[:, :, :3]    
+        frame2 = frame2[:, :, :3]
+        
+        assert w1 + w2 == 1, "Weights must sum to 1"
+        
+        f1 = resize_square(normalize_luminance(to_grayscale(frame1)))  # Preprocessing
+        f2 = resize_square(normalize_luminance(to_grayscale(frame2)))
+        
+        ssim_score = ssim(f1, f2)
+        mse_score = mse(f1, f2)
+    
+        def norm_mse(z, slope=80):
+            return 1/(z/slope + 1)
+            
+        norm_mse_score = norm_mse(mse_score)
+        
+        return w1 * ssim_score + w2 * norm_mse_score</code></pre>
+
+
+
+        </section>
+    </div>
+    <!-- Contact-->
+    <section class="page-section" id="contact">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6 text-center">
+                    <h2 class="mt-0">Our Team</h2>
                 </div>
-                <div class="container pt-4">
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-6 mb-4 pt-4 text-center">
-                            <p class="text-muted mb-0">Elena Eleftheriou</p>
-                            <img class="img-fluid" src="assets/img/e.png" alt="Elena Eleftheriou" />                            
-                        </div>
-                        <div class="col-lg-3 col-sm-6 mb-4 pt-4 text-center">
-                            <p class="text-muted mb-0">Antreas Laos</p>
-                            <img class="img-fluid" src="assets/img/a.png" alt="Antreas Laos" />                            
-                        </div>
-                        <div class="col-lg-3 col-sm-6 mb-4 pt-4 text-center">                            
-                            <p class="text-muted mb-0">Michael Leo</p>
-                            <img class="img-fluid" src="assets/img/m.png" alt="Michael Leo" />
-                        </div>
-                        <div class="col-lg-3 col-sm-6 mb-4 pt-4 text-center">
-                            <p class="text-muted mb-0">Sevastian Bahynskyi</p>
-                            <img class="img-fluid" src="assets/img/s.png" alt="Sevastian Bahynskyi" />
-                        </div>
+            </div>
+            <div class="container pt-4">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 mb-4 pt-4 text-center">
+                        <p class="text-muted mb-0">Elena Eleftheriou</p>
+                        <img class="img-fluid" src="assets/img/e.png" alt="Elena Eleftheriou" />
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-4 pt-4 text-center">
+                        <p class="text-muted mb-0">Antreas Laos</p>
+                        <img class="img-fluid" src="assets/img/a.png" alt="Antreas Laos" />
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-4 pt-4 text-center">
+                        <p class="text-muted mb-0">Michael Leo</p>
+                        <img class="img-fluid" src="assets/img/m.png" alt="Michael Leo" />
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-4 pt-4 text-center">
+                        <p class="text-muted mb-0">Sevastian Bahynskyi</p>
+                        <img class="img-fluid" src="assets/img/s.png" alt="Sevastian Bahynskyi" />
                     </div>
                 </div>
-                
             </div>
-        </section>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- SimpleLightbox plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+
+        </div>
+    </section>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+
 </html>

@@ -2843,6 +2843,17 @@ textarea.form-control-lg {
   border-color: var(--bs-btn-disabled-border-color);
   opacity: var(--bs-btn-disabled-opacity);
 }
+code {
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+  color: #333; /* Dark text color */
+}
+pre {
+  background-color: #f4f4f4; /* Light grey background for code block */
+  border: 1px solid #ccc;    /* Light border */
+  padding: 10px;             /* Padding inside the code block */
+  border-radius: 4px;        /* Rounded corners */
+  overflow-x: auto;          /* Allow horizontal scrolling */
+}
 
 .btn-primary {
   --bs-btn-color: #fff;
