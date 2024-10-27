@@ -1,0 +1,17 @@
+{
+  "name": "2024",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node",
+    "start": "node ./src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gif.js": "^0.2.0",
+    "ws": "^8.18.0"
+  }
+}

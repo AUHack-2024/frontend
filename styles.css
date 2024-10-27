@@ -1,0 +1,47 @@
+/* style.css */
+:root{
+    --main-image-width: 80vw;
+    --history-change-image-width: calc(100vw - var(--main-image-width));
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(48, 48, 49);
+}
+
+h1 {
+    color: rgb(220, 141, 141);
+    width: fit-content;
+}
+
+#main-image{
+    width: var(--main-image-width);
+    max-height: 100vh;
+}
+
+#history-view{
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100vh;
+    width: var(--history-change-image-width);
+    color: rgb(255, 255, 255);
+}
+
+#history{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#history-view img{
+    width: 100%;
+}
+
+.layout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+
+}
