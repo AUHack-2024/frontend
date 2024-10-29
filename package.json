@@ -2,11 +2,11 @@
   "name": "2024",
   "version": "1.0.0",
   "description": "",
-  "main": ".src/index.js",
+  "main": "./js/ws_client.js",
   "type": "module",
   "scripts": {
     "test": "node",
-    "start": "node ./src/index.js"
+    "start": "node ./js/ws_client.js"
   },
   "author": "",
   "license": "ISC",

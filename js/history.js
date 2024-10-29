@@ -1,5 +1,3 @@
-// import { createGif } from './gif-gen.js';
-
 const dictionary = {};
 let imageList = [];
 const historyView = document.getElementById("history-view")
@@ -40,22 +38,6 @@ function renderMainGif(counter, n){
         base64Images.push(element.image)
     });
     createVideo(base64Images)
-    // const gif = new GIF({
-    //     workers: 2,    
-    //     quality: 5,   // Quality of the GIF (lower means better quality)
-    //     workerScript: './gif.worker.js', // Path to the gif.worker.js file
-    // });
-    // gifArray.forEach((base64) => {
-    //     base64ToImage(base64.image, (img) => {
-    //         gif.addFrame(img, { delay: 170 }); 
-    //     })
-    // })
-    // gif.on('finished', (blob) => {
-    //     const gifUrl = URL.createObjectURL(blob);
-    //     console.log('GIF created:', gifUrl);
-    
-    //     mainImage.src = gifUrl
-    // });
 }
 
 function base64ToImage(base64String, callback) {

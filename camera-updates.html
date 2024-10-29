@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image rendering</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./js/ws_client.js"></script>
+  </head>
+  <body>
+    <h1 style="text-align: center">Critical Image Change</h1>
+    <div class="layout">
+      <video id="video" controls width="1080"></video>
+      <span id="main-image-value"></span>
+      <div id="history-view">
+        <h2>History of changes</h2>
+        <div id="history">
+          <div class="history-element">
+            <img
+              src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg"
+            />
+          </div>
+          <div class="history-element">
+            <img
+              src="https://miro.medium.com/v2/resize:fit:1200/1*uNCVd_VqFOcdxhsL71cT5Q.jpeg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/history.js"></script>
+</html>
