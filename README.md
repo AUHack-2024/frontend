@@ -1,4 +1,12 @@
-# Accelerated image processing using JAX for surveillance camera assistance
+# How does it work?
+
+https://github.com/user-attachments/assets/52ffcfe5-9868-46bd-a11a-7d0e09d4eb07
+
+This is the outcome - the client that connects to the python backend server and receives packages via WebSocket. It receives the frames and the value, representing how much changes happened in between frames, where 0 is drastic changes and 1 - no changes at all.
+
+The algorithm behind that is throuroghly described below - but let's first grasp what's shown in the video. It has a strip of frames, ordered, and at the top you see the most important frames, where a lot objects were moving in the video. Additionaly, the extract of which has the most critical changes is glued back to the video preview, so it would be easier to comprehend the actions.
+
+## Accelerated image processing using JAX for surveillance camera assistance
 
 The rise of artificial intelligence in security and surveillance has led to an increased demand for high-performance image processing systems. Surveillance cameras, especially in areas with high traffic like airports, shopping malls, and public transit stations, require rapid and efficient processing of video feeds to assist with monitoring. Here, the use of JAX, a high-performance numerical computing library developed by Google, emerges as a game-changer. Leveraging JAX for image processing in surveillance applications enables faster computations, which is really needed when talking about multiple video feeds processed in real-time. 
 
